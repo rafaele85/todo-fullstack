@@ -9,7 +9,8 @@ export default defineConfig({
     globals: true,
     coverage: {
       provider: 'v8',
-      all: false,
+      include: ['src/**/*.{ts,tsx}'],
+      exclude: ['src/main.tsx'],
       thresholds: { lines: 80, functions: 80, branches: 80, statements: 80 },
     },
   },
