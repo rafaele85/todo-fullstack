@@ -18,7 +18,8 @@ const config: Linter.Config[] = [
     },
     rules: {
       ...tseslint.configs["recommended"]?.rules,
-      "@typescript-eslint/no-unused-vars": ["error", { argsIgnorePattern: "^_" }],
+      "@typescript-eslint/no-unused-vars": ["error", { vars: "all", args: "after-used", ignoreRestSiblings: true }],
+      "@typescript-eslint/no-unused-expressions": "error",
       "@typescript-eslint/no-explicit-any": "error",
       "@typescript-eslint/consistent-type-imports": "error",
       "quotes": ["error", "single"],
