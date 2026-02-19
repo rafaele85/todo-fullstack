@@ -10,9 +10,11 @@
     "test:coverage": "jest --coverage --coverageThreshold '{\"global\":{\"lines\":80,\"functions\":80,\"branches\":80,\"statements\":80}}'"
   },
   "dependencies": {
+    "@prisma/client": "^6.0.0",
     "fastify": "^5.0.0"
   },
   "devDependencies": {
+    "prisma": "^6.0.0",
     "@types/jest": "^30.0.0",
     "jest": "^30.2.0",
     "ts-jest": "^29.4.6"
