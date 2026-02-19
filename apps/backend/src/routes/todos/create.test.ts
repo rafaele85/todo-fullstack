@@ -1,5 +1,4 @@
 import { buildApp } from '../../app.js';
-import { registerCreateTodoRoute } from './create.js';
 import { prisma } from '../../db.js';
 
 jest.mock('../../db.js', () => ({
@@ -14,7 +13,6 @@ describe('POST /todos', () => {
     jest.mocked(prisma.todo.create).mockResolvedValue(todo);
 
     const app = buildApp();
-    registerCreateTodoRoute(app);
     const response = await app.inject({ method: 'POST', url: '/todos', payload: { title: 'Buy milk' } });
 
     expect(response.statusCode).toBe(201);
@@ -23,7 +21,6 @@ describe('POST /todos', () => {
 
   it('returns 400 when title is missing', async () => {
     const app = buildApp();
-    registerCreateTodoRoute(app);
     const response = await app.inject({ method: 'POST', url: '/todos', payload: {} });
 
     expect(response.statusCode).toBe(400);
