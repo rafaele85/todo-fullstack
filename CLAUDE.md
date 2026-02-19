@@ -5,7 +5,7 @@ See [docs/project-setup.md](docs/project-setup.md) for project overview and GitH
 ## Development Workflow
 
 1. Analyze the ticket
-2. Create a feature branch (`feature/<issue-number>-<slug>`)
+2. Create a feature branch from `main` (`git checkout main && git checkout -b feature/<issue-number>-<slug>`)
 3. Write code + tests
 4. Run quality gates: `typecheck`, `eslint`, unit tests
 5. Commit and push branch
