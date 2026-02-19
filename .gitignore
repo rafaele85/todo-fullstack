@@ -1,6 +1,12 @@
 .idea
-node_modules
+node_modules/
+dist/
+coverage/
 .env
+.env.*
+!.env.example
 .token
 set-token.bat
 settings.local.json
+*.tsbuildinfo
+.DS_Store

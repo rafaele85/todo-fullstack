@@ -1,0 +1,23 @@
+{
+  "name": "todo-fullstack",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "typecheck": "tsc --build",
+    "lint": "eslint \"apps/**/*.{ts,tsx}\"",
+    "format": "prettier --write \"apps/**/*.{ts,tsx,json}\"",
+    "format:check": "prettier --check \"apps/**/*.{ts,tsx,json}\""
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
+    "eslint": "^9.9.0",
+    "jiti": "^2.0.0",
+    "prettier": "^3.0.0",
+    "typescript": "^5.5.0"
+  },
+  "engines": {
+    "node": ">=20",
+    "pnpm": ">=9"
+  }
+}

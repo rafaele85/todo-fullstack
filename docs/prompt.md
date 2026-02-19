@@ -37,6 +37,8 @@ TS guidelines:
 * ";" at the end of each statement
 * curly braces even for single line bodies of if/for, etc
 * functional react components
+* single quotes for strings
+* no index.ts files - use meaningful names (e.g. server.ts, app.ts, router.ts)
 
 
 
