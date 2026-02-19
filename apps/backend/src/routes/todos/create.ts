@@ -8,8 +8,6 @@ const createTodoBody = z.object({
   completed: z.boolean().optional(),
 });
 
-export type CreateTodoBody = z.infer<typeof createTodoBody>;
-
 export const registerCreateTodoRoute = (app: FastifyInstance): void => {
   app.withTypeProvider<ZodTypeProvider>().post(
     '/todos',

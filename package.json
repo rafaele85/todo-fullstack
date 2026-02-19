@@ -6,13 +6,15 @@
     "typecheck": "tsc --build",
     "lint": "eslint \"apps/**/*.{ts,tsx}\"",
     "format": "prettier --write \"apps/**/*.{ts,tsx,json}\"",
-    "format:check": "prettier --check \"apps/**/*.{ts,tsx,json}\""
+    "format:check": "prettier --check \"apps/**/*.{ts,tsx,json}\"",
+    "check:unused-exports": "knip"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^8.0.0",
     "@typescript-eslint/parser": "^8.0.0",
     "eslint": "^9.9.0",
     "jiti": "^2.0.0",
+    "knip": "^5.84.1",
     "prettier": "^3.0.0",
     "typescript": "^5.5.0"
   },
@@ -20,7 +22,17 @@
     "node": ">=20",
     "pnpm": ">=9"
   },
+  "knip": {
+    "workspaces": {
+      "apps/backend": {
+        "entry": ["src/server.ts"]
+      }
+    },
+    "include": ["exports", "types"]
+  },
   "pnpm": {
-    "onlyBuiltDependencies": ["esbuild"]
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
   }
 }
