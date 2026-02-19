@@ -5,9 +5,16 @@
   "scripts": {
     "typecheck": "tsc --noEmit",
     "lint": "eslint \"src/**/*.ts\"",
-    "format:check": "prettier --check \"src/**/*.ts\""
+    "format:check": "prettier --check \"src/**/*.ts\"",
+    "test": "jest",
+    "test:coverage": "jest --coverage --coverageThreshold '{\"global\":{\"lines\":80,\"functions\":80,\"branches\":80,\"statements\":80}}'"
   },
   "dependencies": {
     "fastify": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "jest": "^30.2.0",
+    "ts-jest": "^29.4.6"
   }
 }
