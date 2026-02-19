@@ -29,6 +29,10 @@ See [docs/project-setup.md](docs/project-setup.md) for project overview and GitH
 
 - Only comment on problems or suggestions for improvement — do not narrate what is correct or fine
 
+## Backend Guidelines
+
+- Use **Zod** for all API DTO validation and type inference — derive TypeScript types with `z.infer<>` rather than writing them manually
+
 ## TypeScript Guidelines
 
 - Prefer `type` over `interface`
