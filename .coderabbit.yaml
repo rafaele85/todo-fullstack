@@ -11,3 +11,9 @@ reviews:
     drafts: false
     base_branches:
       - main
+  path_filters:
+    - "!**/node_modules/**"
+    - "!**/dist/**"
+    - "!**/*.json"
+  profile: chill
+  changed_files_only: true
