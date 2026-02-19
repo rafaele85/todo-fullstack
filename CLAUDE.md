@@ -13,12 +13,21 @@ See [docs/project-setup.md](docs/project-setup.md) for project overview and GitH
 7. Open a PR targeting `main` as the base branch and submit for human approval
 8. Do not start the next ticket until the current PR is approved and merged
 
+## Tooling
+
+- This is a **pnpm monorepo** — always use `pnpm` instead of `npm` or `yarn`
+- Workspace commands: `pnpm --filter @todo/backend <script>` or `pnpm -w <script>`
+
 ## Constraints
 
 - Tiny increments — one ticket at a time, no work ahead
 - Each PR: max 2–3 files changed, max ~30 new/changed lines; split tickets if needed
 - Test coverage ≥ 80% on all TypeScript code
 - All code must be TypeScript — no `.js` files
+
+## PR Review Guidelines
+
+- Only comment on problems or suggestions for improvement — do not narrate what is correct or fine
 
 ## TypeScript Guidelines
 
