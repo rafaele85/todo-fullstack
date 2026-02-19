@@ -8,7 +8,9 @@ const config: Linter.Config[] = [
     languageOptions: {
       parser: tsparser,
       parserOptions: {
-        projectService: true,
+        projectService: {
+          allowDefaultProject: ['apps/*/*.config.ts'],
+        },
       },
     },
     plugins: {
