@@ -7,5 +7,23 @@
         "GITHUB_PERSONAL_ACCESS_TOKEN": "<your-token>"
       }
     }
+  },
+  "permissions": {
+    "allow": [
+      "Bash(pnpm typecheck *)",
+      "Bash(git fetch*)",
+      "Bash(git checkout *)",
+      "Bash(git merge *)",
+      "Bash(git stash *)",
+      "Bash(git log *)",
+      "Bash(git status *)",
+      "Bash(gh branch *)",
+      "Bash(gh pr *)",
+      "Bash(gh issue create *)",
+      "Bash(pnpm lint *)",
+      "Bash(pnpm build *)",
+      "Bash(pnpm dev *)",
+      "Bash(curl -s http://localhost*)"
+    ]
   }
 }

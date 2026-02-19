@@ -10,7 +10,7 @@ See [docs/project-setup.md](docs/project-setup.md) for project overview and GitH
 4. Run quality gates: `typecheck`, `eslint`, unit tests
 5. Commit and push branch
 6. Wait for CI/CD to pass
-7. Open a PR and submit for human approval
+7. Open a PR targeting `main` as the base branch and submit for human approval
 8. Do not start the next ticket until the current PR is approved and merged
 
 ## Constraints
