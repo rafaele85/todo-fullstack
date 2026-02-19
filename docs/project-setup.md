@@ -7,7 +7,7 @@ Fullstack TODO app — a portfolio-ready project demonstrating a modern TypeScri
 ## Tech Stack
 
 - **Frontend**: React + Vite + Vitest
-- **Backend**: Fastify + Jest
+- **Backend**: Fastify + Zod + Jest
 - **Database**: Prisma + PostgreSQL (CloudSQL)
 - **Infra**: Terraform, GCP Cloud Run, Artifact Registry
 - **CI/CD**: GitHub Actions
