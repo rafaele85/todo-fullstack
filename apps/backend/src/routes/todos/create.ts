@@ -1,5 +1,6 @@
 import { z } from 'zod';
 import type { FastifyInstance } from 'fastify';
+import { type ZodTypeProvider } from 'fastify-type-provider-zod';
 import { prisma } from '../../db.js';
 
 const createTodoBody = z.object({
@@ -10,15 +11,15 @@ const createTodoBody = z.object({
 export type CreateTodoBody = z.infer<typeof createTodoBody>;
 
 export const registerCreateTodoRoute = (app: FastifyInstance): void => {
-  app.post('/todos', async (request, reply) => {
-    const result = createTodoBody.safeParse(request.body);
-    if (!result.success) {
-      return reply.status(400).send({ error: result.error.flatten() });
-    }
-    const { title, completed } = result.data;
-    const todo = await prisma.todo.create({
-      data: { title, completed: completed ?? false },
-    });
-    return reply.status(201).send(todo);
-  });
+  app.withTypeProvider<ZodTypeProvider>().post(
+    '/todos',
+    { schema: { body: createTodoBody } },
+    async (request, reply) => {
+      const { title, completed } = request.body;
+      const todo = await prisma.todo.create({
+        data: { title, completed: completed ?? false },
+      });
+      return reply.status(201).send(todo);
+    },
+  );
 };
