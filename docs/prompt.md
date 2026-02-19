@@ -29,6 +29,8 @@ IMPORTANT: Development principles:
 * Each ticket must pass CI/CD before you create PR
 * All ts code must be test covered with unit tests and test coverage must be 80% or higher
 * Tiny increments. Dont start working on the next increment until current increment is approved
+* Each PR must be small: no more than 2-3 files changed, no more than 30 new/changed lines of code
+* Split tickets into subtickets if needed to keep PRs small
 
 TS guidelines:
 * prefer types over interfaces
@@ -37,6 +39,8 @@ TS guidelines:
 * ";" at the end of each statement
 * curly braces even for single line bodies of if/for, etc
 * functional react components
+* single quotes for strings
+* no index.ts files - use meaningful names (e.g. server.ts, app.ts, router.ts)
 
 
 
