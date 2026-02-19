@@ -11,6 +11,8 @@
   "permissions": {
     "allow": [
       "Bash(pnpm typecheck *)",
+      "Bash(pnpm -w typecheck*)",
+      "Bash(pnpm -w format:check*)",
       "Bash(git fetch*)",
       "Bash(git checkout *)",
       "Bash(git merge *)",
@@ -35,15 +37,19 @@
       "Bash(gh issue *)",
       "Bash(gh repo *)",
       "Bash(pnpm lint *)",
+      "Bash(pnpm check:unused-exports*)",
+      "Bash(pnpm -w eslint*)",
       "Bash(pnpm format*)",
       "Bash(cd * && git stash && pnpm format:check*; git stash pop)",
       "Bash(pnpm test *)",
       "Bash(pnpm test:coverage*)",
       "Bash(pnpm --filter *)",
       "Bash(pnpm install *)",
+      "Bash(pnpm add *)",
       "Bash(pnpm build *)",
       "Bash(pnpm dev *)",
-      "Bash(curl -s http://localhost*)"
+      "Bash(curl -s http://localhost*)",
+      "mcp__github__get_pull_request_status"
     ]
   }
 }
