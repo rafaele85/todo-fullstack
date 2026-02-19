@@ -13,18 +13,10 @@ See [docs/project-setup.md](docs/project-setup.md) for project overview and GitH
 7. Open a PR and submit for human approval
 8. Do not start the next ticket until the current PR is approved and merged
 
-## PR Size — HARD LIMIT
-
-**Every PR must have: ≤ 3 files changed AND ≤ 30 lines added/changed.**
-
-- If a ticket requires more, split it into sub-tickets first — do not start coding
-- Count lines before opening a PR; if over limit, stop and split
-- `pnpm-lock.yaml`, generated files, and config-only changes don't count toward the line limit
-- One logical change per PR — no bundling unrelated fixes
-
-## Other Constraints
+## Constraints
 
 - Tiny increments — one ticket at a time, no work ahead
+- Each PR: max 2–3 files changed, max ~30 new/changed lines; split tickets if needed
 - Test coverage ≥ 80% on all TypeScript code
 - All code must be TypeScript — no `.js` files
 
